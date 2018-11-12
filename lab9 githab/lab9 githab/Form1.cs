@@ -21,12 +21,15 @@ namespace lab9_githab
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;        
-            Pen mypen = new Pen(Color.Black, 3);
-            Point point1 = new Point(100,100);
-            Point point2= new Point(200, 200);
-            e.Graphics.DrawLine(mypen, point1, point2);
+            Pen mypen = new Pen(Color.Green, 2);
+            mypen.DashStyle = DashStyle.DashDot;
+            e.Graphics.DrawLine(mypen,10,80,220,80);
             mypen.Dispose();
-           
+            mypen = new Pen(Brushes.DeepSkyBlue, 40);
+            e.Graphics.DrawLine(mypen, 10, 120, 220, 120);
+            mypen.Dispose();
+
+
         }
     }
 }
